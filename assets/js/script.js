@@ -1,4 +1,19 @@
-// Navigation toggle for mobile
+// ---------------------------------------------------------------- Theme
+const themeToggle = document.getElementById('theme-toggle');
+const root = document.documentElement;
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const next =
+      root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {}
+  });
+}
+
+// ---------------------------------------------------------------- Mobile nav
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
@@ -6,25 +21,30 @@ if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
   });
-  // Close menu when clicking a link
   navMenu.querySelectorAll('.nav-link').forEach((link) => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('show');
-    });
+    link.addEventListener('click', () => navMenu.classList.remove('show'));
   });
 }
 
-// Highlight active link based on scroll position
-const sections = document.querySelectorAll('section');
+// ---------------------------------------------------------------- Header shadow
+const header = document.getElementById('header');
+function onScrollHeader() {
+  if (!header) return;
+  header.classList.toggle('scrolled', window.scrollY > 20);
+}
+window.addEventListener('scroll', onScrollHeader);
+onScrollHeader();
+
+// ---------------------------------------------------------------- Active link
+const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
 function activateNavLink() {
-  let scrollY = window.pageYOffset;
+  const scrollY = window.pageYOffset;
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 70; // offset header height
+    const sectionTop = current.offsetTop - 90;
     const sectionId = current.getAttribute('id');
-
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       navLinks.forEach((link) => {
         link.classList.remove('active');
@@ -35,10 +55,51 @@ function activateNavLink() {
     }
   });
 }
-
 window.addEventListener('scroll', activateNavLink);
 
-// Contact form mailto handler
+// ---------------------------------------------------------------- Reveal on scroll
+// Tag common blocks as reveal targets, then fade them in as they enter view.
+const revealTargets = document.querySelectorAll(
+  '.reveal, .skill-item, .exp-item, .project-card, .edu-item, .pub-item, .about-image, .about-content, .hero-stat'
+);
+revealTargets.forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = `${(i % 6) * 60}ms`;
+});
+
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.classList.add('visible');
+
+      // Animate skill bars when their card appears
+      const bar = el.querySelector && el.querySelector('.skill-progress');
+      if (bar && bar.dataset.width) {
+        requestAnimationFrame(() => {
+          bar.style.width = bar.dataset.width;
+        });
+      }
+      io.unobserve(el);
+    });
+  },
+  { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+);
+revealTargets.forEach((el) => io.observe(el));
+
+// Store skill-bar target widths (set inline in HTML) then reset to 0 for animation
+document.querySelectorAll('.skill-progress').forEach((bar) => {
+  const target = bar.style.width || '0%';
+  bar.dataset.width = target;
+  bar.style.width = '0%';
+});
+
+// ---------------------------------------------------------------- Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ---------------------------------------------------------------- Contact form
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -56,10 +117,7 @@ if (contactForm) {
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\n${message}`
     );
-    // Compose mailto link
-    const mailtoLink = `mailto:dharmanikheem@gmail.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    // Optionally reset the form
+    window.location.href = `mailto:dharmanikheem@gmail.com?subject=${subject}&body=${body}`;
     contactForm.reset();
   });
 }

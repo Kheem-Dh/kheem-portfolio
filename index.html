@@ -16,6 +16,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      // Apply saved / system theme before paint to avoid a flash
+      (function () {
+        var t =
+          localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        // Mark JS as available so reveal animations only hide content when
+        // JavaScript can bring it back.
+        document.documentElement.classList.add('js');
+      })();
+    </script>
   </head>
   <body>
     <!-- Header / Navigation -->
@@ -37,8 +51,18 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </div>
-        <div class="nav-toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="bx bx-moon"></i>
+            <i class="bx bx-sun"></i>
+          </button>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+            <i class="bx bx-menu"></i>
+          </button>
         </div>
       </nav>
     </header>
@@ -49,8 +73,12 @@
       <section class="section hero" id="home">
         <div class="container hero-container">
           <div class="hero-content">
+            <span class="hero-badge">
+              <span class="dot"></span> Available for AI Engineer roles
+            </span>
             <h1 class="hero-title">
-              Hi, I'm <span class="primary-color">Kheem Parkash Dharmani</span>
+              Hi, I'm
+              <span class="gradient-text">Kheem Parkash Dharmani</span>
             </h1>
             <h2 class="hero-subtitle">
               Agentic AI Engineer &amp; Applied ML Researcher
@@ -100,6 +128,24 @@
           <div class="hero-image">
             <img src="assets/img/hero.png" alt="Abstract AI artwork" />
           </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="num"><span>5+</span></div>
+              <div class="label">Years in AI / ML</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num"><span>13+</span></div>
+              <div class="label">AI projects shipped</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num"><span>3</span></div>
+              <div class="label">Peer-reviewed papers</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num"><span>6</span></div>
+              <div class="label">Certifications</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -113,6 +159,7 @@
             />
           </div>
           <div class="about-content">
+            <span class="eyebrow">Get to know me</span>
             <h2 class="section-title">About Me</h2>
             <p>
               I’m a Lead AI Engineer focused on building agentic and
@@ -132,6 +179,14 @@
               and safe tool use. I enjoy interdisciplinary problems where
               technical rigour meets real user impact.
             </p>
+            <div class="about-tags">
+              <span>Agentic AI</span>
+              <span>LLM Fine-Tuning</span>
+              <span>RAG Pipelines</span>
+              <span>Multi-Agent Systems</span>
+              <span>Healthcare AI</span>
+              <span>MLOps</span>
+            </div>
           </div>
         </div>
       </section>
@@ -139,7 +194,10 @@
       <!-- Skills Section -->
       <section class="section skills" id="skills">
         <div class="container">
-          <h2 class="section-title">Skills</h2>
+          <div class="section-head reveal">
+            <span class="eyebrow">What I work with</span>
+            <h2 class="section-title">Skills &amp; Tech Stack</h2>
+          </div>
           <div class="skills-grid">
             <!-- 1. Programming -->
             <div class="skill-item">
@@ -335,7 +393,10 @@
       <!-- Experience Section -->
       <section class="section experience" id="experience">
         <div class="container">
-          <h2 class="section-title">Experience</h2>
+          <div class="section-head reveal">
+            <span class="eyebrow">Where I've worked</span>
+            <h2 class="section-title">Experience</h2>
+          </div>
           <div class="experience-list">
             <div class="exp-item">
               <h3>Lead AI Engineer</h3>
@@ -436,7 +497,10 @@
       <!-- Projects Section -->
       <section class="section projects" id="projects">
         <div class="container">
-          <h2 class="section-title">Projects</h2>
+          <div class="section-head reveal">
+            <span class="eyebrow">Selected work</span>
+            <h2 class="section-title">Featured Projects</h2>
+          </div>
           <div class="projects-grid">
             <!-- 1. Medical Knowledge QA System (RAG) -->
             <a
@@ -684,7 +748,10 @@
       <!-- Education Section -->
       <section class="section education" id="education">
         <div class="container">
-          <h2 class="section-title">Education</h2>
+          <div class="section-head reveal">
+            <span class="eyebrow">Academic background</span>
+            <h2 class="section-title">Education</h2>
+          </div>
           <div class="education-list">
             <div class="edu-item">
               <h3>MS in Data Science</h3>
@@ -711,7 +778,10 @@
       <!-- Licenses & Certifications -->
       <section class="section certifications" id="certifications">
         <div class="container">
-          <h2 class="section-title">Licenses &amp; Certifications</h2>
+          <div class="section-head reveal">
+            <span class="eyebrow">Continuous learning</span>
+            <h2 class="section-title">Licenses &amp; Certifications</h2>
+          </div>
 
           <div class="skills-grid">
             <!-- re-use same 3-column grid -->
@@ -841,7 +911,10 @@
       <!-- Publications Section -->
       <section class="section publications" id="publications">
         <div class="container">
-          <h2 class="section-title">Publications</h2>
+          <div class="section-head reveal">
+            <span class="eyebrow">Research</span>
+            <h2 class="section-title">Publications</h2>
+          </div>
           <div class="publications-list">
             <!-- 1. SDCG for Image Captioning -->
             <a
@@ -909,7 +982,10 @@
       <!-- Contact Section -->
       <section class="section contact" id="contact">
         <div class="container">
-          <h2 class="section-title">Get in Touch</h2>
+          <div class="section-head reveal">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">Get in Touch</h2>
+          </div>
           <p class="contact-text">
             Whether you have an interesting project, a question, or just want to
             say hello, my inbox is always open. Feel free to drop a message!
@@ -944,7 +1020,8 @@
     <footer class="footer">
       <div class="container footer-container">
         <p class="footer-copy">
-          © 2025 Kheem Parkash Dharmani. All rights reserved.
+          &copy; <span id="year">2025</span> Kheem Parkash Dharmani. Built with
+          HTML, CSS &amp; JavaScript.
         </p>
         <div class="footer-social">
           <a
