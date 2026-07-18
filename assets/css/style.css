@@ -374,6 +374,16 @@ ul {
   color: var(--light-text);
 }
 
+.project-stack {
+  font-size: 0.78rem;
+  color: var(--primary-color);
+  margin-top: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-top: 1px dashed rgba(74, 108, 247, 0.25);
+  padding-top: 0.6rem;
+}
+
 /* Education Section */
 .education-list {
   display: flex;
