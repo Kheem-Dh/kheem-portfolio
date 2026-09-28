@@ -1,4 +1,4 @@
-// Theme toggle (remembers choice), older-news toggle, footer year.
+// Theme toggle (remembers choice), mobile menu, older-news toggle, footer year.
 (function () {
   var root = document.documentElement;
   try {
@@ -17,6 +17,25 @@
     });
   }
 
+  // Mobile / tablet menu
+  var menuBtn = document.getElementById('menu-toggle');
+  var links = document.getElementById('nav-links');
+  function closeMenu() {
+    if (!links) return;
+    links.classList.remove('open');
+    if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+  }
+  if (menuBtn && links) {
+    menuBtn.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 960) closeMenu(); });
+  }
+
+  // Older news
   var older = document.querySelectorAll('.news li.older');
   var btn = document.getElementById('news-toggle');
   older.forEach(function (li) { li.hidden = true; });

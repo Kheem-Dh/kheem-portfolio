@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kheem Parkash Dharmani</title>
-<meta name="description" content="Kheem Parkash Dharmani — Lead AI Engineer and applied ML researcher working on trustworthy language models, clinical retrieval-augmented generation and medical imaging.">
+<meta name="description" content="Kheem Parkash Dharmani — Lead AI Engineer at JournalClub.net and applied ML researcher working on trustworthy clinical AI, evidence appraisal, retrieval-augmented generation and medical imaging.">
+<meta name="theme-color" content="#0f5c63">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,9 +14,13 @@
 <body>
 
 <header class="topbar">
-  <nav class="wrap nav">
+  <nav class="nav container" aria-label="Main">
     <a class="brand" href="#about">Kheem Parkash Dharmani</a>
-    <div class="nav-links">
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#news">News</a>
       <a href="#publications">Publications</a>
@@ -23,223 +28,264 @@
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="assets/pdf/Kheem_Parkash_Dharmani_CV.pdf">CV</a>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch light or dark theme">Theme</button>
     </div>
   </nav>
 </header>
 
-<main class="wrap">
+<div class="layout container">
 
-  <!-- ===== About ===== -->
-  <section id="about" class="profile">
+  <!-- ===== Sidebar profile ===== -->
+  <aside class="sidebar" aria-label="Profile">
     <div class="avatar">
       <img src="assets/img/profile.jpg" alt="Kheem Parkash Dharmani" onerror="this.remove()">
       <span class="initials" aria-hidden="true">KD</span>
     </div>
-    <div class="intro">
+    <div class="ident">
       <h1>Kheem Parkash Dharmani</h1>
-      <p class="role">Lead AI Engineer, <a href="https://www.clinicalpearl.com/">Clinical Pearl</a> &middot; Applied ML Researcher</p>
-      <p class="meta">Islamabad, Pakistan &middot; <a href="mailto:dharmanikheem@gmail.com">dharmanikheem@gmail.com</a></p>
+      <p class="role">Lead AI Engineer, <a href="https://www.journalclub.net/">JournalClub.net</a></p>
+      <p class="role muted">Applied ML researcher &middot; Clinical AI</p>
+      <ul class="facts">
+        <li>Islamabad, Pakistan (UTC+5)</li>
+        <li><a href="mailto:dharmanikheem@gmail.com">dharmanikheem@gmail.com</a></li>
+      </ul>
       <p class="links">
         <a href="assets/pdf/Kheem_Parkash_Dharmani_CV.pdf">CV</a>
         <a href="https://github.com/Kheem-Dh">GitHub</a>
         <a href="https://www.linkedin.com/in/kheemparkashdharmani/">LinkedIn</a>
-        <a href="#publications">Publications</a>
       </p>
     </div>
-  </section>
+  </aside>
 
-  <section class="bio">
-    <p>I build and evaluate AI systems for healthcare. At <a href="https://www.clinicalpearl.com/">Clinical Pearl</a>, a US healthcare product company, I lead a team of three engineers building a production retrieval-augmented generation (RAG) platform that answers clinical questions for more than 1,000 clinicians. My work there spans retrieval and grounding, LLM evaluation and observability, and evidence-backed biomedical knowledge sources built from FDA drug data, RxNorm and SNOMED CT.</p>
-    <p>My research interest is <strong>trustworthy language models for clinical use</strong>: methods to evaluate, ground and calibrate LLMs and RAG systems so their outputs can be checked against evidence. I developed two evaluation frameworks for clinical AI, CAMEO-AI and PEARL-G, presented at EBM Live, Oxford (2026). Before that, my MS thesis at FAST-NUCES combined vision transformers and language models for radiology report generation on MIMIC-CXR. I have three peer-reviewed publications in applied NLP and multimodal learning.</p>
-    <p class="callout">I am looking for a <strong>fully funded PhD position (Fall 2027)</strong> in trustworthy and clinical AI. Please get in touch if my work fits your group.</p>
-    <div class="interests">
-      <span>LLM evaluation</span><span>Retrieval-augmented generation</span><span>Clinical NLP</span><span>Medical imaging</span><span>Uncertainty &amp; grounding</span><span>Agentic workflows</span>
-    </div>
-  </section>
+  <main class="content">
 
-  <!-- ===== News ===== -->
-  <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      <li><time>2026</time><span>Built <a href="#products">Nabz</a>, an Urdu-first AI health companion, for the Alibaba Cloud AI Hackathon (Healthcare track).</span></li>
-      <li><time>Jun 2026</time><span>Presented the CAMEO-AI and PEARL-G evaluation frameworks for clinical AI at <strong>EBM Live</strong>, Oxford.</span></li>
-      <li><time>Jul 2025</time><span>Paper on sentiment-aware image captioning published in <em>Computers, Materials &amp; Continua</em>.</span></li>
-      <li><time>Apr 2025</time><span>Promoted to Lead AI Engineer at Clinical Pearl.</span></li>
-      <li><time>Sep 2024</time><span>EEBERT published in <em>IEEE Access</em>.</span></li>
-      <li class="older"><time>Aug 2024</time><span>Urdu emoji-aware sentiment paper published in <em>IEEE Access</em>.</span></li>
-      <li class="older"><time>Jun 2024</time><span>Completed my MS in Data Science at FAST-NUCES, Islamabad.</span></li>
-      <li class="older"><time>Apr 2024</time><span>Joined Clinical Pearl as ML/AI Engineer.</span></li>
-      <li class="older"><time>Sep 2023</time><span>Received the IEEE eLearning Course Trial Award (IEEE Xplore Challenge for Researchers in Pakistan).</span></li>
-    </ul>
-    <button class="more" id="news-toggle" type="button">Show older news</button>
-  </section>
+    <!-- ===== About ===== -->
+    <section id="about">
+      <h2>About</h2>
+      <p>I build and evaluate AI systems for evidence-based medicine. At <a href="https://www.journalclub.net/">JournalClub.net</a>, a US health-education and research platform based in Princeton, NJ, I lead a team of three engineers. We build <strong>Clinical Pearl</strong>, a production retrieval-augmented generation (RAG) platform that answers clinical questions for more than 1,000 clinicians, and I am currently building <strong>AI Appraisal</strong>, which helps readers critically appraise medical research articles.</p>
+      <p>My research interest is <strong>trustworthy language models for clinical use</strong>: methods to evaluate, ground and calibrate LLMs and RAG systems so their outputs can be checked against evidence. I co-developed <a href="https://researchevidence.org/">CAMEO-AI</a>, a framework for appraising AI randomized controlled trials, and PEARL-G, both presented at EBM Live, Oxford (2026). My MS thesis at FAST-NUCES combined vision transformers and language models for radiology report generation on MIMIC-CXR. I have three peer-reviewed publications in applied NLP and multimodal learning.</p>
+      <p class="callout">I am looking for a <strong>fully funded PhD position (Fall 2027)</strong> in trustworthy and clinical AI. Please get in touch if my work fits your group.</p>
+      <div class="interests" aria-label="Research interests">
+        <span>LLM evaluation</span><span>Evidence appraisal</span><span>Retrieval-augmented generation</span><span>Clinical NLP</span><span>Medical imaging</span><span>Uncertainty &amp; grounding</span>
+      </div>
+    </section>
 
-  <!-- ===== Publications ===== -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <ol class="pubs">
-      <li>
-        <span class="venue">CMC 2025</span>
-        <div>
-          <a class="title" href="https://www.techscience.com/cmc/v84n2/62924">Optimizing Sentiment Integration in Image Captioning Using Transformer-Based Fusion Strategies</a>
-          <p class="authors">K. R. Narejo, H. Zan, <b>K. P. Dharmani</b>, O. Mamyrbayev, A. Akhmediyarova, Z. Alibiyeva, J. Alimkulova</p>
-          <p class="where"><em>Computers, Materials &amp; Continua</em>, 84(2):3407–3429, 2025. <a href="https://doi.org/10.32604/cmc.2025.065872">DOI</a></p>
-          <p class="note">A sentiment-driven caption generator that fuses ViT visual features with RoBERTa sentiment signals; reaches 94.52% sentiment accuracy.</p>
-        </div>
-      </li>
-      <li>
-        <span class="venue">IEEE Access 2024</span>
-        <div>
-          <a class="title" href="https://ieeexplore.ieee.org/document/10669019">EEBERT: An Emoji-Enhanced BERT Fine-Tuning on Amazon Product Reviews for Text Sentiment Classification</a>
-          <p class="authors">K. R. Narejo, H. Zan, <b>K. P. Dharmani</b>, L. Zhou, T. J. Alahmadi, N. Sehito, Y. Y. Ghadi, M. Assam</p>
-          <p class="where"><em>IEEE Access</em>, 2024.</p>
-        </div>
-      </li>
-      <li>
-        <span class="venue">IEEE Access 2024</span>
-        <div>
-          <a class="title" href="https://ieeexplore.ieee.org/document/10643088">Enhancing Emoji-Based Sentiment Classification in Urdu Tweets: Fusion Strategies With Multilingual BERT and Emoji Embeddings</a>
-          <p class="authors">K. R. Narejo, H. Zan, D. Oralbekova, <b>K. P. Dharmani</b>, O. Mamyrbayev, K. Mukhsina</p>
-          <p class="where"><em>IEEE Access</em>, 2024.</p>
-        </div>
-      </li>
-    </ol>
-    <h3>Talks &amp; presentations</h3>
-    <ul class="plain">
-      <li>CAMEO-AI and PEARL-G: evaluation frameworks for clinical AI. <em>EBM Live</em>, Oxford, June 2026.</li>
-    </ul>
-    <h3>Thesis</h3>
-    <ul class="plain">
-      <li><a href="https://github.com/Kheem-Dh/RadiologyReportGen-AI">A Hybrid Approach for Automated Radiology Report Generation and Summarization using Vision Transformers and Language Models</a>. MS thesis, FAST-NUCES, 2024. Supervisor: Dr. Ejaz Ahmed. Improved BLEU by 45% and ROUGE-L by 55% over the baseline on MIMIC-CXR.</li>
-    </ul>
-  </section>
+    <!-- ===== News ===== -->
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><time>2026</time><span>Building <strong>AI Appraisal</strong> for <a href="https://www.journalclub.net/">JournalClub.net</a> to help clinicians appraise medical research articles.</span></li>
+        <li><time>2026</time><span>Launched <a href="https://nabz-web.onrender.com/">Nabz</a>, an Urdu-first AI health-triage companion, built for the Alibaba Cloud AI Hackathon (Healthcare track), and <a href="https://daulat-web.onrender.com/">Daulat</a>, an evidence-based PSX investing companion.</span></li>
+        <li><time>Jun 2026</time><span>Presented <a href="https://researchevidence.org/">CAMEO-AI</a> and PEARL-G at <strong>EBM Live</strong>, Oxford.</span></li>
+        <li><time>Jul 2025</time><span>Paper on sentiment-aware image captioning published in <em>Computers, Materials &amp; Continua</em>.</span></li>
+        <li><time>Apr 2025</time><span>Promoted to Lead AI Engineer.</span></li>
+        <li class="older"><time>Sep 2024</time><span>EEBERT published in <em>IEEE Access</em>.</span></li>
+        <li class="older"><time>Aug 2024</time><span>Urdu emoji-aware sentiment paper published in <em>IEEE Access</em>.</span></li>
+        <li class="older"><time>Jun 2024</time><span>Completed my MS in Data Science at FAST-NUCES, Islamabad.</span></li>
+        <li class="older"><time>Apr 2024</time><span>Joined JournalClub.net as ML/AI Engineer on Clinical Pearl.</span></li>
+        <li class="older"><time>Sep 2023</time><span>Received the IEEE eLearning Course Trial Award (IEEE Xplore Challenge for Researchers in Pakistan).</span></li>
+      </ul>
+      <button class="more" id="news-toggle" type="button">Show older news</button>
+    </section>
 
-  <!-- ===== Products ===== -->
-  <section id="products">
-    <h2>Products</h2>
-    <div class="cards two">
-      <article class="card">
-        <h3>Nabz <span class="urdu" lang="ur">نبض</span></h3>
-        <p class="tag">AI health companion &middot; Alibaba Cloud AI Hackathon 2026 (Healthcare)</p>
-        <p>An Urdu-first health assistant for Pakistani families. It runs voice triage one question at a time, reads lab reports and prescriptions from photos and explains them in Urdu, and keeps a per-patient Medical Vault with family profiles and a health timeline. Emergency red flags stop the conversation immediately, and a printable English handoff summary is ready for the doctor.</p>
-        <p class="stack">React &middot; Vite &middot; FastAPI &middot; Qwen (qwen-plus, qwen-vl-plus via DashScope) &middot; SQLAlchemy &middot; JWT auth</p>
-      </article>
-      <article class="card">
-        <h3>Daulat <span class="urdu" lang="ur">دولت</span></h3>
-        <p class="tag">PSX wealth-building intelligence platform</p>
-        <p>A long-term investing intelligence platform for the Pakistan Stock Exchange. It keeps market data fresh through an automated, scheduled data pipeline and supports disciplined, long-horizon portfolio building across blue-chip sectors.</p>
-        <p class="stack">Python &middot; automated market-data pipeline &middot; GitHub Actions</p>
-      </article>
-    </div>
-  </section>
+    <!-- ===== Publications ===== -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li>
+          <span class="venue">CMC 2025</span>
+          <div>
+            <a class="title" href="https://www.techscience.com/cmc/v84n2/62924">Optimizing Sentiment Integration in Image Captioning Using Transformer-Based Fusion Strategies</a>
+            <p class="authors">K. R. Narejo, H. Zan, <b>K. P. Dharmani</b>, O. Mamyrbayev, A. Akhmediyarova, Z. Alibiyeva, J. Alimkulova</p>
+            <p class="where"><em>Computers, Materials &amp; Continua</em>, 84(2):3407–3429, 2025. <a href="https://doi.org/10.32604/cmc.2025.065872">DOI</a></p>
+            <p class="note">A sentiment-driven caption generator that fuses ViT visual features with RoBERTa sentiment signals; 94.52% sentiment accuracy.</p>
+          </div>
+        </li>
+        <li>
+          <span class="venue">IEEE Access 2024</span>
+          <div>
+            <a class="title" href="https://ieeexplore.ieee.org/document/10669019">EEBERT: An Emoji-Enhanced BERT Fine-Tuning on Amazon Product Reviews for Text Sentiment Classification</a>
+            <p class="authors">K. R. Narejo, H. Zan, <b>K. P. Dharmani</b>, L. Zhou, T. J. Alahmadi, N. Sehito, Y. Y. Ghadi, M. Assam</p>
+            <p class="where"><em>IEEE Access</em>, 2024.</p>
+          </div>
+        </li>
+        <li>
+          <span class="venue">IEEE Access 2024</span>
+          <div>
+            <a class="title" href="https://ieeexplore.ieee.org/document/10643088">Enhancing Emoji-Based Sentiment Classification in Urdu Tweets: Fusion Strategies With Multilingual BERT and Emoji Embeddings</a>
+            <p class="authors">K. R. Narejo, H. Zan, D. Oralbekova, <b>K. P. Dharmani</b>, O. Mamyrbayev, K. Mukhsina</p>
+            <p class="where"><em>IEEE Access</em>, 2024.</p>
+          </div>
+        </li>
+      </ol>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects">
-    <h2>Selected projects</h2>
+      <h3>Conference posters &amp; talks</h3>
+      <ul class="plain">
+        <li><a href="https://researchevidence.org/">CAMEO-AI</a>: a 190-item appraisal framework for AI randomized clinical trials, with a bibliometric and quality review of 2,826 AI/ML RCTs (2020–2025) using RoB 2, CONSORT-AI and SPIRIT-AI. Poster, <em>EBM Live</em>, Oxford, June 2026 (co-author).</li>
+        <li>PEARL-G: evaluation framework for clinical AI. <em>EBM Live</em>, Oxford, June 2026.</li>
+      </ul>
 
-    <h3 class="sub">At Clinical Pearl</h3>
-    <ul class="projects">
-      <li><b>Clinical RAG platform.</b> Production retrieval-augmented generation for clinical decision support, used by 1,000+ clinicians. Cut query latency by 40%, improved answer relevance by 20%+ and reduced deployment failures by 35%. <span class="stack">LLMs &middot; RAG &middot; PostgreSQL/pgvector &middot; FastAPI</span></li>
-      <li><b>Disease–drug knowledge source.</b> Evidence-backed knowledge base integrating FDA drug data with RxNorm and SNOMED CT, used to ground drug and treatment answers.</li>
-      <li><b>CAMEO-AI and PEARL-G.</b> Evaluation frameworks and observability tooling for clinical LLM outputs, presented at EBM Live, Oxford (2026).</li>
-      <li><b>Visual abstracts for clinical guidelines.</b> Automated pipeline that turns urgent-care guidelines into structured visual summaries (risk rail, decision flow, key points), verified across 75 topics. <span class="stack">Django &middot; PostgreSQL</span></li>
-    </ul>
+      <h3>Thesis</h3>
+      <ul class="plain">
+        <li><a href="https://github.com/Kheem-Dh/RadiologyReportGen-AI">A Hybrid Approach for Automated Radiology Report Generation and Summarization using Vision Transformers and Language Models</a>. MS thesis, FAST-NUCES, 2024. Supervisor: Dr. Ejaz Ahmed. Improved BLEU by 45% and ROUGE-L by 55% over the baseline on MIMIC-CXR.</li>
+      </ul>
+    </section>
 
-    <h3 class="sub">Open source</h3>
-    <div class="cards">
-      <article class="card">
-        <h3><a href="https://github.com/Kheem-Dh/RadiologyReportGen-AI">RadiologyReportGen-AI</a></h3>
-        <p>Hybrid vision–language model for chest X-ray report generation: ViT image features with a fine-tuned GPT-2 decoder, from my MS thesis.</p>
-        <p class="stack">PyTorch &middot; ViT &middot; GPT-2 &middot; MIMIC-CXR</p>
-      </article>
-      <article class="card">
-        <h3><a href="https://github.com/Kheem-Dh/control-automation-agent">Control Automation Agent</a></h3>
-        <p>Agentic system that tests IT access controls over the full evidence population, isolates exceptions with an evidence trail and routes low-confidence cases to a human, with an evaluation harness. Synthetic data only.</p>
-        <p class="stack">LangGraph &middot; FastAPI &middot; Streamlit</p>
-      </article>
-      <article class="card">
-        <h3><a href="https://github.com/Kheem-Dh/Retrieval-and-Generation-of-Clinical-Insights-from-PDF">Clinical Insights from PDFs</a></h3>
-        <p>Question answering over medical research PDFs with a unified vector store, switchable LLMs and a Streamlit interface.</p>
-        <p class="stack">LangChain &middot; ChromaDB &middot; Streamlit</p>
-      </article>
-      <article class="card">
-        <h3><a href="https://github.com/Kheem-Dh/Urdu-to-English-Machine-Translation-using-Seq2Seq-Transformers-Variant-Model">Urdu → English Translation</a></h3>
-        <p>Sequence-to-sequence transformer for Urdu-to-English machine translation.</p>
-        <p class="stack">PyTorch &middot; Transformers</p>
-      </article>
-      <article class="card">
-        <h3><a href="https://github.com/Kheem-Dh/Word2Vec-Algorithm-From-Scratch">Word2Vec from Scratch</a></h3>
-        <p>The Word2Vec embedding algorithm and its training loop implemented from first principles.</p>
-        <p class="stack">Python &middot; NumPy</p>
-      </article>
-      <article class="card">
-        <h3><a href="https://github.com/Kheem-Dh/OCR-Text-Extraction-From-Images-to-Images">OCR Text Extraction</a></h3>
-        <p>Detects and extracts text from images and re-renders clean text for downstream NLP.</p>
-        <p class="stack">Python &middot; OCR</p>
-      </article>
-      <article class="card">
-        <h3><a href="https://github.com/Kheem-Dh/Churn-Predication-Pipeline-Using-Azure-Cloud-">Churn Prediction ETL on Azure</a></h3>
-        <p>End-to-end pipeline from transactional streams to an Azure SQL database, with a churn model and Streamlit dashboard.</p>
-        <p class="stack">Azure Data Factory &middot; SQL &middot; Streamlit</p>
-      </article>
-    </div>
-  </section>
+    <!-- ===== Products ===== -->
+    <section id="products">
+      <h2>Products</h2>
+      <div class="cards two">
+        <article class="card">
+          <h3><a href="https://nabz-web.onrender.com/">Nabz</a> <span class="urdu" lang="ur">نبض</span></h3>
+          <p class="tag">Urdu-first AI health-triage companion &middot; Alibaba Cloud AI Hackathon 2026</p>
+          <p>A health assistant for Pakistani families. It runs Urdu voice triage one question at a time, reads lab reports and prescriptions from photos and explains them in Urdu, and keeps a per-patient Medical Vault with family profiles and a health timeline. Emergency red flags stop the conversation immediately, and a printable English handoff summary is ready for the doctor.</p>
+          <p class="stack">React &middot; Vite &middot; FastAPI &middot; Qwen (qwen-plus, qwen-vl-plus) &middot; SQLAlchemy &middot; installable web app</p>
+          <p class="cta"><a href="https://nabz-web.onrender.com/">Open Nabz →</a></p>
+        </article>
+        <article class="card">
+          <h3><a href="https://daulat-web.onrender.com/">Daulat</a> <span class="urdu" lang="ur">دولت</span></h3>
+          <p class="tag">Build PSX wealth, with evidence</p>
+          <p>A calm, long-term investing companion for the Pakistan Stock Exchange. Users plan a goal with bear, base and optimistic paths (inflation, dividends and step-ups included), analyse any stock with a fair-value range and plain-language pros and cons, track their real portfolio (cost basis, P/L, XIRR), and ask questions answered from their own holdings. Every number comes from a tested engine and carries its source; missing data is shown as unavailable, never guessed.</p>
+          <p class="stack">Python &middot; valuation &amp; portfolio engine &middot; LLM Q&amp;A grounded in user data &middot; automated market-data refresh</p>
+          <p class="cta"><a href="https://daulat-web.onrender.com/">Open Daulat →</a></p>
+        </article>
+      </div>
+    </section>
 
-  <!-- ===== Experience ===== -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul class="timeline">
-      <li><time>Apr 2025 – now</time><span><div><b>Lead AI Engineer</b>, Clinical Pearl (Princeton, NJ; remote)<br><span class="muted">Lead a team of three on the clinical RAG platform; evaluation, observability, hiring and mentoring; HIPAA-regulated data.</span></div></span></li>
-      <li><time>Apr 2024 – Mar 2025</time><span><div><b>ML / AI Engineer</b>, Clinical Pearl<br><span class="muted">Fine-tuned LLMs (GPT, LLaMA, Mistral) for clinical-trial applications; built RAG and multimodal RAG systems.</span></div></span></li>
-      <li><time>Jan 2023 – Mar 2024</time><span><div><b>Machine Learning Engineer</b>, Cplus Soft, Islamabad<br><span class="muted">Generative AI for question answering and summarisation; LangChain workflows.</span></div></span></li>
-      <li><time>Jul 2023 – Nov 2023</time><span><div><b>Machine Learning Trainer</b>, AI Lounge / NUST, Gilgit-Baltistan<br><span class="muted">Designed and taught a data science and AI curriculum.</span></div></span></li>
-      <li><time>Jan 2023 – Jun 2023</time><span><div><b>NLP Teaching Assistant</b>, FAST-NUCES, Islamabad</div></span></li>
-    </ul>
-  </section>
+    <!-- ===== Projects ===== -->
+    <section id="projects">
+      <h2>Selected projects</h2>
 
-  <!-- ===== Education ===== -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul class="timeline">
-      <li><time>2022 – 2024</time><span><div><b>MS in Data Science</b>, FAST-NUCES, Islamabad<br><span class="muted">Thesis on radiology report generation with vision transformers and language models.</span></div></span></li>
-      <li><time>2016 – 2020</time><span><div><b>BE in Computer Systems Engineering</b>, Mehran University of Engineering &amp; Technology, Jamshoro<br><span class="muted">CGPA 3.72 / 4.00.</span></div></span></li>
-    </ul>
-  </section>
+      <h3 class="sub">At JournalClub.net</h3>
+      <div class="cards">
+        <article class="card">
+          <h3>Clinical Pearl</h3>
+          <p>Production RAG platform for clinical decision support used by 1,000+ clinicians. I lead the team; we cut query latency by 40%, improved answer relevance by 20%+ and reduced deployment failures by 35%.</p>
+          <p class="stack">LLMs &middot; RAG &middot; PostgreSQL/pgvector &middot; FastAPI &middot; HIPAA</p>
+        </article>
+        <article class="card">
+          <h3>AI Appraisal <span class="pill">In progress</span></h3>
+          <p>AI-assisted critical appraisal of medical research articles on <a href="https://www.journalclub.net/">JournalClub.net</a>, helping residents and clinicians judge study quality and bias.</p>
+          <p class="stack">LLMs &middot; evidence-based medicine &middot; appraisal checklists</p>
+        </article>
+        <article class="card">
+          <h3>Disease–drug knowledge base</h3>
+          <p>Evidence-backed knowledge source for Clinical Pearl that links diseases and drugs using FDA drug data, RxNorm and SNOMED CT, used to ground drug and treatment answers.</p>
+          <p class="stack">FDA drug data &middot; RxNorm &middot; SNOMED CT &middot; PostgreSQL</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://researchevidence.org/">CAMEO-AI</a></h3>
+          <p>Appraisal framework and interactive evidence site for AI randomized clinical trials: 2,826 trials reviewed for risk of bias and reporting completeness.</p>
+          <p class="stack">Evidence synthesis &middot; RoB 2 &middot; CONSORT-AI &middot; SPIRIT-AI</p>
+        </article>
+        <article class="card">
+          <h3>Visual abstracts</h3>
+          <p>Automated pipeline that turns clinical guidelines and papers into structured visual summaries (risk rail, decision flow, key points), verified across 75 urgent-care topics.</p>
+          <p class="stack">Django &middot; PostgreSQL &middot; LLMs</p>
+        </article>
+        <article class="card">
+          <h3><a href="http://uccmed.org/index.html">UCCMED</a></h3>
+          <p>AI point-of-care clinical engine for urgent care (Society for Academic Urgent Care Medicine): structured consults, AI search, ambient history-taking, visual diagnosis and clinical decision rules.</p>
+          <p class="stack">LLMs &middot; clinical decision support</p>
+        </article>
+      </div>
 
-  <!-- ===== Skills & certs ===== -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <dl class="skills">
-      <dt>Languages</dt><dd>Python, R, SQL</dd>
-      <dt>ML &amp; DL</dt><dd>PyTorch, TensorFlow, Keras, scikit-learn; CNNs, vision transformers, sequence models</dd>
-      <dt>LLMs</dt><dd>Transformers, fine-tuning (GPT, LLaMA, Mistral), RAG, LangChain, LangGraph, LLM evaluation &amp; observability, Qwen</dd>
-      <dt>Data &amp; backend</dt><dd>PostgreSQL / pgvector, ChromaDB, FastAPI, Django, Streamlit, React</dd>
-      <dt>Cloud</dt><dd>Microsoft Azure (Data Factory, Cognitive Services); AWS Solutions Architect course</dd>
-    </dl>
-    <h3>Awards &amp; certifications</h3>
-    <ul class="plain">
-      <li>IEEE eLearning Course Trial Award, IEEE Xplore Challenge for Researchers in Pakistan, 2023.</li>
-      <li>Machine Learning Specialization — DeepLearning.AI &amp; Stanford Online (<a href="assets/pdf/Coursera DGSLZT2T27XQ.pdf">certificate</a>)</li>
-      <li>Generative AI with LLMs — DeepLearning.AI (<a href="assets/pdf/Coursera 7WR2YLJ6CFUH.pdf">certificate</a>)</li>
-      <li>Generative Pre-trained Transformers — University of Glasgow (<a href="assets/pdf/Coursera XEJ45XZ9LXLB.pdf">certificate</a>)</li>
-      <li>AI for Everyone — DeepLearning.AI (<a href="assets/pdf/Coursera VMRBKCN96YNA.pdf">certificate</a>)</li>
-      <li>Python for Data Science, AI &amp; Development — IBM (<a href="assets/pdf/Coursera FV2DGK5529ZM.pdf">certificate</a>)</li>
-      <li>Oracle SQL Databases — LearnQuest (<a href="assets/pdf/Coursera B94CL4MHKWMM.pdf">certificate</a>)</li>
-    </ul>
-  </section>
+      <h3 class="sub">Open source</h3>
+      <div class="cards">
+        <article class="card">
+          <h3><a href="https://github.com/Kheem-Dh/RadiologyReportGen-AI">RadiologyReportGen-AI</a></h3>
+          <p>Chest X-ray report generation with ViT image features and a fine-tuned GPT-2 decoder, from my MS thesis.</p>
+          <p class="stack">PyTorch &middot; ViT &middot; GPT-2 &middot; MIMIC-CXR</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Kheem-Dh/control-automation-agent">Control Automation Agent</a></h3>
+          <p>Agentic system that tests IT access controls over the full evidence population, isolates exceptions with an evidence trail and routes low-confidence cases to a human, with an evaluation harness.</p>
+          <p class="stack">LangGraph &middot; FastAPI &middot; Streamlit</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Kheem-Dh/Retrieval-and-Generation-of-Clinical-Insights-from-PDF">Clinical Insights from PDFs</a></h3>
+          <p>Question answering over medical research PDFs with a unified vector store, switchable LLMs and a Streamlit interface.</p>
+          <p class="stack">LangChain &middot; ChromaDB &middot; Streamlit</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Kheem-Dh/Urdu-to-English-Machine-Translation-using-Seq2Seq-Transformers-Variant-Model">Urdu → English Translation</a></h3>
+          <p>Sequence-to-sequence transformer for Urdu-to-English machine translation.</p>
+          <p class="stack">PyTorch &middot; Transformers</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Kheem-Dh/Word2Vec-Algorithm-From-Scratch">Word2Vec from Scratch</a></h3>
+          <p>The Word2Vec embedding algorithm and its training loop implemented from first principles.</p>
+          <p class="stack">Python &middot; NumPy</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Kheem-Dh/OCR-Text-Extraction-From-Images-to-Images">OCR Text Extraction</a></h3>
+          <p>Detects and extracts text from images and re-renders clean text for downstream NLP.</p>
+          <p class="stack">Python &middot; OCR</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/Kheem-Dh/Churn-Predication-Pipeline-Using-Azure-Cloud-">Churn Prediction ETL on Azure</a></h3>
+          <p>End-to-end pipeline from transactional streams to an Azure SQL database, with a churn model and Streamlit dashboard.</p>
+          <p class="stack">Azure Data Factory &middot; SQL &middot; Streamlit</p>
+        </article>
+      </div>
+    </section>
 
-  <!-- ===== Contact ===== -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email <a href="mailto:dharmanikheem@gmail.com">dharmanikheem@gmail.com</a> or reach me on <a href="https://www.linkedin.com/in/kheemparkashdharmani/">LinkedIn</a>. I am based in Islamabad (UTC+5) and happy to talk about research collaborations, PhD opportunities and applied AI roles.</p>
-  </section>
+    <!-- ===== Experience ===== -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li><time>Apr 2025 – now</time><div><b>Lead AI Engineer</b>, JournalClub.net (Princeton, NJ; remote)<br><span class="muted">Lead a team of three on Clinical Pearl and AI Appraisal; evaluation and observability, hiring and mentoring; HIPAA-regulated data.</span></div></li>
+        <li><time>Apr 2024 – Mar 2025</time><div><b>ML / AI Engineer</b>, JournalClub.net — Clinical Pearl<br><span class="muted">Fine-tuned LLMs (GPT, LLaMA, Mistral) for clinical-trial applications; built RAG and multimodal RAG systems.</span></div></li>
+        <li><time>Jan 2023 – Mar 2024</time><div><b>Machine Learning Engineer</b>, Cplus Soft, Islamabad<br><span class="muted">Generative AI for question answering and summarisation; LangChain workflows.</span></div></li>
+        <li><time>Jul 2023 – Nov 2023</time><div><b>Machine Learning Trainer</b>, AI Lounge / NUST, Gilgit-Baltistan<br><span class="muted">Designed and taught a data science and AI curriculum.</span></div></li>
+        <li><time>Jan 2023 – Jun 2023</time><div><b>NLP Teaching Assistant</b>, FAST-NUCES, Islamabad</div></li>
+      </ul>
+    </section>
 
-</main>
+    <!-- ===== Education ===== -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li><time>2022 – 2024</time><div><b>MS in Data Science</b>, FAST-NUCES, Islamabad<br><span class="muted">Thesis on radiology report generation with vision transformers and language models.</span></div></li>
+        <li><time>2016 – 2020</time><div><b>BE in Computer Systems Engineering</b>, Mehran University of Engineering &amp; Technology, Jamshoro<br><span class="muted">CGPA 3.72 / 4.00.</span></div></li>
+      </ul>
+    </section>
 
-<footer class="wrap footer">
-  <p>© <span id="year">2026</span> Kheem Parkash Dharmani</p>
-</footer>
+    <!-- ===== Skills ===== -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>Python, R, SQL</dd>
+        <dt>ML &amp; DL</dt><dd>PyTorch, TensorFlow, Keras, scikit-learn; CNNs, vision transformers, sequence models</dd>
+        <dt>LLMs</dt><dd>Transformers, fine-tuning (GPT, LLaMA, Mistral), RAG, LangChain, LangGraph, LLM evaluation &amp; observability, Qwen</dd>
+        <dt>Biomedical data</dt><dd>MIMIC-CXR, FDA drug data, RxNorm, SNOMED CT; evidence appraisal (RoB 2, CONSORT-AI, SPIRIT-AI)</dd>
+        <dt>Data &amp; backend</dt><dd>PostgreSQL / pgvector, ChromaDB, FastAPI, Django, Streamlit, React</dd>
+        <dt>Cloud</dt><dd>Microsoft Azure (Data Factory, Cognitive Services); AWS Solutions Architect course</dd>
+      </dl>
+
+      <h3>Awards &amp; certifications</h3>
+      <ul class="plain">
+        <li>IEEE eLearning Course Trial Award, IEEE Xplore Challenge for Researchers in Pakistan, 2023.</li>
+        <li>Machine Learning Specialization — DeepLearning.AI &amp; Stanford Online (<a href="assets/pdf/Coursera DGSLZT2T27XQ.pdf">certificate</a>)</li>
+        <li>Generative AI with LLMs — DeepLearning.AI (<a href="assets/pdf/Coursera 7WR2YLJ6CFUH.pdf">certificate</a>)</li>
+        <li>Generative Pre-trained Transformers — University of Glasgow (<a href="assets/pdf/Coursera XEJ45XZ9LXLB.pdf">certificate</a>)</li>
+        <li>AI for Everyone — DeepLearning.AI (<a href="assets/pdf/Coursera VMRBKCN96YNA.pdf">certificate</a>)</li>
+        <li>Python for Data Science, AI &amp; Development — IBM (<a href="assets/pdf/Coursera FV2DGK5529ZM.pdf">certificate</a>)</li>
+        <li>Oracle SQL Databases — LearnQuest (<a href="assets/pdf/Coursera B94CL4MHKWMM.pdf">certificate</a>)</li>
+      </ul>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email <a href="mailto:dharmanikheem@gmail.com">dharmanikheem@gmail.com</a> or reach me on <a href="https://www.linkedin.com/in/kheemparkashdharmani/">LinkedIn</a>. I am happy to talk about research collaborations, PhD opportunities and applied AI roles.</p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year">2026</span> Kheem Parkash Dharmani</p>
+    </footer>
+  </main>
+</div>
 
 <script src="assets/js/script.js"></script>
 </body>
