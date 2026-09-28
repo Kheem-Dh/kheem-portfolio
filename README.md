@@ -1,30 +1,25 @@
-# Kheem Parkash Dharmani – Portfolio
+# Kheem Parkash Dharmani – Academic homepage
 
-Personal portfolio website for **Kheem Parkash Dharmani** — Lead AI
-Engineer specialising in agentic AI, Retrieval-Augmented Generation and
-applied LLM systems for healthcare.
+Personal homepage of **Kheem Parkash Dharmani**, Lead AI Engineer at Clinical Pearl and applied ML researcher working on trustworthy language models, clinical retrieval-augmented generation (RAG) and medical imaging.
 
 Live site: [kheem-dh.github.io/kheem-portfolio](https://kheem-dh.github.io/kheem-portfolio/)
 
-## Highlights
+## Contents
 
-- Multi-agent systems built with **LangGraph**, **CrewAI**, **AutoGen** and
-  the **Model Context Protocol (MCP)**.
-- Production RAG pipelines with **LangChain**, **LlamaIndex**, **Pinecone**,
-  **Weaviate** and **Qdrant**.
-- LLM fine-tuning (LoRA / QLoRA / DPO) on **LLaMA**, **Mistral** and
-  **Qwen** for domain-specialised tasks.
-- LLMOps / evaluation with **LangSmith**, **Langfuse**, **RAGAS** and
-  **DeepEval**.
-- Peer-reviewed publications in IEEE Access and CMC on multimodal
-  sentiment, emoji-aware BERT and Urdu NLP.
+- About, news, publications, talks and thesis
+- Products: **Nabz** (Urdu-first AI health companion) and **Daulat** (PSX wealth-building intelligence platform)
+- Selected projects from Clinical Pearl and open source
+- Experience, education, skills and certifications
+- CV: `assets/pdf/Kheem_Parkash_Dharmani_CV.pdf`
+
+To show a photo, add `assets/img/profile.jpg` (square). Without it the page shows the initials "KD".
 
 ## Tech
 
-Plain HTML / CSS / JS — no build step. Deployed via GitHub Pages.
+Plain HTML / CSS / JS with light and dark themes — no build step. Deployed via GitHub Pages.
 
 ## Contact
 
 - Email: dharmanikheem@gmail.com
-- LinkedIn: [kheemparkashdharmani](https://pk.linkedin.com/in/kheemparkashdharmani)
+- LinkedIn: [kheemparkashdharmani](https://www.linkedin.com/in/kheemparkashdharmani/)
 - GitHub: [Kheem-Dh](https://github.com/Kheem-Dh)

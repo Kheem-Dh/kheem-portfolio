@@ -1,1049 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kheem Parkash Dharmani – AI Engineer Portfolio</title>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Boxicons for icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script>
-      // Apply saved / system theme before paint to avoid a flash
-      (function () {
-        var t =
-          localStorage.getItem('theme') ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark'
-            : 'light');
-        document.documentElement.setAttribute('data-theme', t);
-        // Mark JS as available so reveal animations only hide content when
-        // JavaScript can bring it back.
-        document.documentElement.classList.add('js');
-      })();
-    </script>
-  </head>
-  <body>
-    <!-- Header / Navigation -->
-    <header class="header" id="header">
-      <nav class="navbar container">
-        <a href="#home" class="logo">Kheem Dharmani</a>
-        <div class="nav-menu" id="nav-menu">
-          <ul class="nav-list">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#education" class="nav-link">Education</a></li>
-            <li>
-              <a href="#certifications" class="nav-link">Certifications</a>
-            </li>
-            <li><a href="#publications" class="nav-link">Publications</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kheem Parkash Dharmani</title>
+<meta name="description" content="Kheem Parkash Dharmani — Lead AI Engineer and applied ML researcher working on trustworthy language models, clinical retrieval-augmented generation and medical imaging.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <nav class="wrap nav">
+    <a class="brand" href="#about">Kheem Parkash Dharmani</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#products">Products</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="assets/pdf/Kheem_Parkash_Dharmani_CV.pdf">CV</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <!-- ===== About ===== -->
+  <section id="about" class="profile">
+    <div class="avatar">
+      <img src="assets/img/profile.jpg" alt="Kheem Parkash Dharmani" onerror="this.remove()">
+      <span class="initials" aria-hidden="true">KD</span>
+    </div>
+    <div class="intro">
+      <h1>Kheem Parkash Dharmani</h1>
+      <p class="role">Lead AI Engineer, <a href="https://www.clinicalpearl.com/">Clinical Pearl</a> &middot; Applied ML Researcher</p>
+      <p class="meta">Islamabad, Pakistan &middot; <a href="mailto:dharmanikheem@gmail.com">dharmanikheem@gmail.com</a></p>
+      <p class="links">
+        <a href="assets/pdf/Kheem_Parkash_Dharmani_CV.pdf">CV</a>
+        <a href="https://github.com/Kheem-Dh">GitHub</a>
+        <a href="https://www.linkedin.com/in/kheemparkashdharmani/">LinkedIn</a>
+        <a href="#publications">Publications</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="bio">
+    <p>I build and evaluate AI systems for healthcare. At <a href="https://www.clinicalpearl.com/">Clinical Pearl</a>, a US healthcare product company, I lead a team of three engineers building a production retrieval-augmented generation (RAG) platform that answers clinical questions for more than 1,000 clinicians. My work there spans retrieval and grounding, LLM evaluation and observability, and evidence-backed biomedical knowledge sources built from FDA drug data, RxNorm and SNOMED CT.</p>
+    <p>My research interest is <strong>trustworthy language models for clinical use</strong>: methods to evaluate, ground and calibrate LLMs and RAG systems so their outputs can be checked against evidence. I developed two evaluation frameworks for clinical AI, CAMEO-AI and PEARL-G, presented at EBM Live, Oxford (2026). Before that, my MS thesis at FAST-NUCES combined vision transformers and language models for radiology report generation on MIMIC-CXR. I have three peer-reviewed publications in applied NLP and multimodal learning.</p>
+    <p class="callout">I am looking for a <strong>fully funded PhD position (Fall 2027)</strong> in trustworthy and clinical AI. Please get in touch if my work fits your group.</p>
+    <div class="interests">
+      <span>LLM evaluation</span><span>Retrieval-augmented generation</span><span>Clinical NLP</span><span>Medical imaging</span><span>Uncertainty &amp; grounding</span><span>Agentic workflows</span>
+    </div>
+  </section>
+
+  <!-- ===== News ===== -->
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>2026</time><span>Built <a href="#products">Nabz</a>, an Urdu-first AI health companion, for the Alibaba Cloud AI Hackathon (Healthcare track).</span></li>
+      <li><time>Jun 2026</time><span>Presented the CAMEO-AI and PEARL-G evaluation frameworks for clinical AI at <strong>EBM Live</strong>, Oxford.</span></li>
+      <li><time>Jul 2025</time><span>Paper on sentiment-aware image captioning published in <em>Computers, Materials &amp; Continua</em>.</span></li>
+      <li><time>Apr 2025</time><span>Promoted to Lead AI Engineer at Clinical Pearl.</span></li>
+      <li><time>Sep 2024</time><span>EEBERT published in <em>IEEE Access</em>.</span></li>
+      <li class="older"><time>Aug 2024</time><span>Urdu emoji-aware sentiment paper published in <em>IEEE Access</em>.</span></li>
+      <li class="older"><time>Jun 2024</time><span>Completed my MS in Data Science at FAST-NUCES, Islamabad.</span></li>
+      <li class="older"><time>Apr 2024</time><span>Joined Clinical Pearl as ML/AI Engineer.</span></li>
+      <li class="older"><time>Sep 2023</time><span>Received the IEEE eLearning Course Trial Award (IEEE Xplore Challenge for Researchers in Pakistan).</span></li>
+    </ul>
+    <button class="more" id="news-toggle" type="button">Show older news</button>
+  </section>
+
+  <!-- ===== Publications ===== -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <ol class="pubs">
+      <li>
+        <span class="venue">CMC 2025</span>
+        <div>
+          <a class="title" href="https://www.techscience.com/cmc/v84n2/62924">Optimizing Sentiment Integration in Image Captioning Using Transformer-Based Fusion Strategies</a>
+          <p class="authors">K. R. Narejo, H. Zan, <b>K. P. Dharmani</b>, O. Mamyrbayev, A. Akhmediyarova, Z. Alibiyeva, J. Alimkulova</p>
+          <p class="where"><em>Computers, Materials &amp; Continua</em>, 84(2):3407–3429, 2025. <a href="https://doi.org/10.32604/cmc.2025.065872">DOI</a></p>
+          <p class="note">A sentiment-driven caption generator that fuses ViT visual features with RoBERTa sentiment signals; reaches 94.52% sentiment accuracy.</p>
         </div>
-        <div class="nav-actions">
-          <button
-            class="theme-toggle"
-            id="theme-toggle"
-            aria-label="Toggle dark mode"
-          >
-            <i class="bx bx-moon"></i>
-            <i class="bx bx-sun"></i>
-          </button>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
-            <i class="bx bx-menu"></i>
-          </button>
+      </li>
+      <li>
+        <span class="venue">IEEE Access 2024</span>
+        <div>
+          <a class="title" href="https://ieeexplore.ieee.org/document/10669019">EEBERT: An Emoji-Enhanced BERT Fine-Tuning on Amazon Product Reviews for Text Sentiment Classification</a>
+          <p class="authors">K. R. Narejo, H. Zan, <b>K. P. Dharmani</b>, L. Zhou, T. J. Alahmadi, N. Sehito, Y. Y. Ghadi, M. Assam</p>
+          <p class="where"><em>IEEE Access</em>, 2024.</p>
         </div>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section class="section hero" id="home">
-        <div class="container hero-container">
-          <div class="hero-content">
-            <span class="hero-badge">
-              <span class="dot"></span> Available for AI Engineer roles
-            </span>
-            <h1 class="hero-title">
-              Hi, I'm
-              <span class="gradient-text">Kheem Parkash Dharmani</span>
-            </h1>
-            <h2 class="hero-subtitle">
-              Agentic AI Engineer &amp; Applied ML Researcher
-            </h2>
-            <p class="hero-text">
-              I design and ship production-grade AI systems &mdash; from
-              multi-agent orchestration and Retrieval-Augmented Generation to
-              LLM fine-tuning and multi-modal pipelines. My focus is building
-              autonomous, tool-using agents that solve real problems in
-              healthcare, research and enterprise workflows.
-            </p>
-            <div class="hero-buttons">
-              <a
-                href="assets/pdf/Kheem_Dharmani_PhD.pdf"
-                class="button"
-                download
-                >Download CV</a
-              >
-
-              <a href="#contact" class="button secondary-button">Contact Me</a>
-            </div>
-            <div class="hero-social">
-              <a
-                href="https://pk.linkedin.com/in/kheemparkashdharmani"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-                aria-label="LinkedIn"
-                ><i class="bx bxl-linkedin"></i
-              ></a>
-              <a
-                href="https://github.com/Kheem-Dh"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-                aria-label="GitHub"
-                ><i class="bx bxl-github"></i
-              ></a>
-              <a
-                href="mailto:dharmanikheem@gmail.com"
-                class="social-link"
-                aria-label="Email"
-                ><i class="bx bxs-envelope"></i
-              ></a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <img src="assets/img/hero.png" alt="Abstract AI artwork" />
-          </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="num"><span>5+</span></div>
-              <div class="label">Years in AI / ML</div>
-            </div>
-            <div class="hero-stat">
-              <div class="num"><span>13+</span></div>
-              <div class="label">AI projects shipped</div>
-            </div>
-            <div class="hero-stat">
-              <div class="num"><span>3</span></div>
-              <div class="label">Peer-reviewed papers</div>
-            </div>
-            <div class="hero-stat">
-              <div class="num"><span>6</span></div>
-              <div class="label">Certifications</div>
-            </div>
-          </div>
+      </li>
+      <li>
+        <span class="venue">IEEE Access 2024</span>
+        <div>
+          <a class="title" href="https://ieeexplore.ieee.org/document/10643088">Enhancing Emoji-Based Sentiment Classification in Urdu Tweets: Fusion Strategies With Multilingual BERT and Emoji Embeddings</a>
+          <p class="authors">K. R. Narejo, H. Zan, D. Oralbekova, <b>K. P. Dharmani</b>, O. Mamyrbayev, K. Mukhsina</p>
+          <p class="where"><em>IEEE Access</em>, 2024.</p>
         </div>
-      </section>
+      </li>
+    </ol>
+    <h3>Talks &amp; presentations</h3>
+    <ul class="plain">
+      <li>CAMEO-AI and PEARL-G: evaluation frameworks for clinical AI. <em>EBM Live</em>, Oxford, June 2026.</li>
+    </ul>
+    <h3>Thesis</h3>
+    <ul class="plain">
+      <li><a href="https://github.com/Kheem-Dh/RadiologyReportGen-AI">A Hybrid Approach for Automated Radiology Report Generation and Summarization using Vision Transformers and Language Models</a>. MS thesis, FAST-NUCES, 2024. Supervisor: Dr. Ejaz Ahmed. Improved BLEU by 45% and ROUGE-L by 55% over the baseline on MIMIC-CXR.</li>
+    </ul>
+  </section>
 
-      <!-- About Section -->
-      <section class="section about" id="about">
-        <div class="container about-container">
-          <div class="about-image">
-            <img
-              src="assets/img/about.png"
-              alt="Abstract head silhouette representing AI researcher"
-            />
-          </div>
-          <div class="about-content">
-            <span class="eyebrow">Get to know me</span>
-            <h2 class="section-title">About Me</h2>
-            <p>
-              I’m a Lead AI Engineer focused on building agentic and
-              generative-AI systems that ship. My day-to-day is designing
-              multi-agent architectures with LangGraph, CrewAI and the Model
-              Context Protocol (MCP); productionising Retrieval-Augmented
-              Generation pipelines with LangChain, LlamaIndex and vector stores
-              like Pinecone, Weaviate and Qdrant; and fine-tuning open LLMs
-              (LLaMA, Mistral, Qwen, Phi) with LoRA / QLoRA for
-              domain-specialised tasks.
-            </p>
-            <p>
-              With a Master’s in Data Science and hands-on delivery across
-              healthcare AI, I care about the parts that make LLM systems
-              actually work in production &mdash; evaluation harnesses,
-              guardrails, observability (LangSmith, Langfuse), cost control,
-              and safe tool use. I enjoy interdisciplinary problems where
-              technical rigour meets real user impact.
-            </p>
-            <div class="about-tags">
-              <span>Agentic AI</span>
-              <span>LLM Fine-Tuning</span>
-              <span>RAG Pipelines</span>
-              <span>Multi-Agent Systems</span>
-              <span>Healthcare AI</span>
-              <span>MLOps</span>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- ===== Products ===== -->
+  <section id="products">
+    <h2>Products</h2>
+    <div class="cards two">
+      <article class="card">
+        <h3>Nabz <span class="urdu" lang="ur">نبض</span></h3>
+        <p class="tag">AI health companion &middot; Alibaba Cloud AI Hackathon 2026 (Healthcare)</p>
+        <p>An Urdu-first health assistant for Pakistani families. It runs voice triage one question at a time, reads lab reports and prescriptions from photos and explains them in Urdu, and keeps a per-patient Medical Vault with family profiles and a health timeline. Emergency red flags stop the conversation immediately, and a printable English handoff summary is ready for the doctor.</p>
+        <p class="stack">React &middot; Vite &middot; FastAPI &middot; Qwen (qwen-plus, qwen-vl-plus via DashScope) &middot; SQLAlchemy &middot; JWT auth</p>
+      </article>
+      <article class="card">
+        <h3>Daulat <span class="urdu" lang="ur">دولت</span></h3>
+        <p class="tag">PSX wealth-building intelligence platform</p>
+        <p>A long-term investing intelligence platform for the Pakistan Stock Exchange. It keeps market data fresh through an automated, scheduled data pipeline and supports disciplined, long-horizon portfolio building across blue-chip sectors.</p>
+        <p class="stack">Python &middot; automated market-data pipeline &middot; GitHub Actions</p>
+      </article>
+    </div>
+  </section>
 
-      <!-- Skills Section -->
-      <section class="section skills" id="skills">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">What I work with</span>
-            <h2 class="section-title">Skills &amp; Tech Stack</h2>
-          </div>
-          <div class="skills-grid">
-            <!-- 1. Programming -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-code-alt"></i>
-                <h3>Programming Languages</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-              <p class="skill-desc">Python, R, SQL</p>
-            </div>
+  <!-- ===== Projects ===== -->
+  <section id="projects">
+    <h2>Selected projects</h2>
 
-            <!-- 2. ML Frameworks -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-chip"></i>
-                <h3>ML Frameworks</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-              <p class="skill-desc">PyTorch, TensorFlow, Keras, Scikit-Learn</p>
-            </div>
+    <h3 class="sub">At Clinical Pearl</h3>
+    <ul class="projects">
+      <li><b>Clinical RAG platform.</b> Production retrieval-augmented generation for clinical decision support, used by 1,000+ clinicians. Cut query latency by 40%, improved answer relevance by 20%+ and reduced deployment failures by 35%. <span class="stack">LLMs &middot; RAG &middot; PostgreSQL/pgvector &middot; FastAPI</span></li>
+      <li><b>Disease–drug knowledge source.</b> Evidence-backed knowledge base integrating FDA drug data with RxNorm and SNOMED CT, used to ground drug and treatment answers.</li>
+      <li><b>CAMEO-AI and PEARL-G.</b> Evaluation frameworks and observability tooling for clinical LLM outputs, presented at EBM Live, Oxford (2026).</li>
+      <li><b>Visual abstracts for clinical guidelines.</b> Automated pipeline that turns urgent-care guidelines into structured visual summaries (risk rail, decision flow, key points), verified across 75 topics. <span class="stack">Django &middot; PostgreSQL</span></li>
+    </ul>
 
-            <!-- 3. Deep Learning -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxs-layer"></i>
-                <h3>Deep Learning</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-              <p class="skill-desc">CNNs, RNNs, LSTMs, Autoencoders</p>
-            </div>
+    <h3 class="sub">Open source</h3>
+    <div class="cards">
+      <article class="card">
+        <h3><a href="https://github.com/Kheem-Dh/RadiologyReportGen-AI">RadiologyReportGen-AI</a></h3>
+        <p>Hybrid vision–language model for chest X-ray report generation: ViT image features with a fine-tuned GPT-2 decoder, from my MS thesis.</p>
+        <p class="stack">PyTorch &middot; ViT &middot; GPT-2 &middot; MIMIC-CXR</p>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Kheem-Dh/control-automation-agent">Control Automation Agent</a></h3>
+        <p>Agentic system that tests IT access controls over the full evidence population, isolates exceptions with an evidence trail and routes low-confidence cases to a human, with an evaluation harness. Synthetic data only.</p>
+        <p class="stack">LangGraph &middot; FastAPI &middot; Streamlit</p>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Kheem-Dh/Retrieval-and-Generation-of-Clinical-Insights-from-PDF">Clinical Insights from PDFs</a></h3>
+        <p>Question answering over medical research PDFs with a unified vector store, switchable LLMs and a Streamlit interface.</p>
+        <p class="stack">LangChain &middot; ChromaDB &middot; Streamlit</p>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Kheem-Dh/Urdu-to-English-Machine-Translation-using-Seq2Seq-Transformers-Variant-Model">Urdu → English Translation</a></h3>
+        <p>Sequence-to-sequence transformer for Urdu-to-English machine translation.</p>
+        <p class="stack">PyTorch &middot; Transformers</p>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Kheem-Dh/Word2Vec-Algorithm-From-Scratch">Word2Vec from Scratch</a></h3>
+        <p>The Word2Vec embedding algorithm and its training loop implemented from first principles.</p>
+        <p class="stack">Python &middot; NumPy</p>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Kheem-Dh/OCR-Text-Extraction-From-Images-to-Images">OCR Text Extraction</a></h3>
+        <p>Detects and extracts text from images and re-renders clean text for downstream NLP.</p>
+        <p class="stack">Python &middot; OCR</p>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/Kheem-Dh/Churn-Predication-Pipeline-Using-Azure-Cloud-">Churn Prediction ETL on Azure</a></h3>
+        <p>End-to-end pipeline from transactional streams to an Azure SQL database, with a churn model and Streamlit dashboard.</p>
+        <p class="stack">Azure Data Factory &middot; SQL &middot; Streamlit</p>
+      </article>
+    </div>
+  </section>
 
-            <!-- 4. NLP & LLMs -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-book"></i>
-                <h3>NLP &amp; LLMs</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-              <p class="skill-desc">Transformers, NLTK, SpaCy, BERT, GPT</p>
-            </div>
+  <!-- ===== Experience ===== -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li><time>Apr 2025 – now</time><span><div><b>Lead AI Engineer</b>, Clinical Pearl (Princeton, NJ; remote)<br><span class="muted">Lead a team of three on the clinical RAG platform; evaluation, observability, hiring and mentoring; HIPAA-regulated data.</span></div></span></li>
+      <li><time>Apr 2024 – Mar 2025</time><span><div><b>ML / AI Engineer</b>, Clinical Pearl<br><span class="muted">Fine-tuned LLMs (GPT, LLaMA, Mistral) for clinical-trial applications; built RAG and multimodal RAG systems.</span></div></span></li>
+      <li><time>Jan 2023 – Mar 2024</time><span><div><b>Machine Learning Engineer</b>, Cplus Soft, Islamabad<br><span class="muted">Generative AI for question answering and summarisation; LangChain workflows.</span></div></span></li>
+      <li><time>Jul 2023 – Nov 2023</time><span><div><b>Machine Learning Trainer</b>, AI Lounge / NUST, Gilgit-Baltistan<br><span class="muted">Designed and taught a data science and AI curriculum.</span></div></span></li>
+      <li><time>Jan 2023 – Jun 2023</time><span><div><b>NLP Teaching Assistant</b>, FAST-NUCES, Islamabad</div></span></li>
+    </ul>
+  </section>
 
-            <!-- 5. Cloud Platforms -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-cloud"></i>
-                <h3>Cloud Platforms</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 75%"></div>
-              </div>
-              <p class="skill-desc">
-                AWS Solution Arch., Azure (ADF, Cognitive Services)
-              </p>
-            </div>
+  <!-- ===== Education ===== -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="timeline">
+      <li><time>2022 – 2024</time><span><div><b>MS in Data Science</b>, FAST-NUCES, Islamabad<br><span class="muted">Thesis on radiology report generation with vision transformers and language models.</span></div></span></li>
+      <li><time>2016 – 2020</time><span><div><b>BE in Computer Systems Engineering</b>, Mehran University of Engineering &amp; Technology, Jamshoro<br><span class="muted">CGPA 3.72 / 4.00.</span></div></span></li>
+    </ul>
+  </section>
 
-            <!-- 6. Data Viz -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-bar-chart-alt-2"></i>
-                <h3>Data Visualization</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 75%"></div>
-              </div>
-              <p class="skill-desc">Tableau, Matplotlib, Seaborn</p>
-            </div>
+  <!-- ===== Skills & certs ===== -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>Python, R, SQL</dd>
+      <dt>ML &amp; DL</dt><dd>PyTorch, TensorFlow, Keras, scikit-learn; CNNs, vision transformers, sequence models</dd>
+      <dt>LLMs</dt><dd>Transformers, fine-tuning (GPT, LLaMA, Mistral), RAG, LangChain, LangGraph, LLM evaluation &amp; observability, Qwen</dd>
+      <dt>Data &amp; backend</dt><dd>PostgreSQL / pgvector, ChromaDB, FastAPI, Django, Streamlit, React</dd>
+      <dt>Cloud</dt><dd>Microsoft Azure (Data Factory, Cognitive Services); AWS Solutions Architect course</dd>
+    </dl>
+    <h3>Awards &amp; certifications</h3>
+    <ul class="plain">
+      <li>IEEE eLearning Course Trial Award, IEEE Xplore Challenge for Researchers in Pakistan, 2023.</li>
+      <li>Machine Learning Specialization — DeepLearning.AI &amp; Stanford Online (<a href="assets/pdf/Coursera DGSLZT2T27XQ.pdf">certificate</a>)</li>
+      <li>Generative AI with LLMs — DeepLearning.AI (<a href="assets/pdf/Coursera 7WR2YLJ6CFUH.pdf">certificate</a>)</li>
+      <li>Generative Pre-trained Transformers — University of Glasgow (<a href="assets/pdf/Coursera XEJ45XZ9LXLB.pdf">certificate</a>)</li>
+      <li>AI for Everyone — DeepLearning.AI (<a href="assets/pdf/Coursera VMRBKCN96YNA.pdf">certificate</a>)</li>
+      <li>Python for Data Science, AI &amp; Development — IBM (<a href="assets/pdf/Coursera FV2DGK5529ZM.pdf">certificate</a>)</li>
+      <li>Oracle SQL Databases — LearnQuest (<a href="assets/pdf/Coursera B94CL4MHKWMM.pdf">certificate</a>)</li>
+    </ul>
+  </section>
 
-            <!-- 7. Version Control -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxl-git"></i>
-                <h3>Version Control</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-              <p class="skill-desc">Git, GitHub</p>
-            </div>
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:dharmanikheem@gmail.com">dharmanikheem@gmail.com</a> or reach me on <a href="https://www.linkedin.com/in/kheemparkashdharmani/">LinkedIn</a>. I am based in Islamabad (UTC+5) and happy to talk about research collaborations, PhD opportunities and applied AI roles.</p>
+  </section>
 
-            <!-- 8. Automation & Scraping -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-bot"></i>
-                <h3>Automation &amp; Scraping</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-              <p class="skill-desc">Selenium, BeautifulSoup, Playwright</p>
-            </div>
+</main>
 
-            <!-- 9. RAG & Fine-Tuning -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-layer-plus"></i>
-                <h3>RAG / Fine-Tuning</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-              <p class="skill-desc">
-                Mono- &amp; multi-modal RAG, hybrid + graph retrieval, LoRA /
-                QLoRA fine-tuning, DPO / RLHF
-              </p>
-            </div>
+<footer class="wrap footer">
+  <p>© <span id="year">2026</span> Kheem Parkash Dharmani</p>
+</footer>
 
-            <!-- 10. Agentic AI Frameworks -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-network-chart"></i>
-                <h3>Agentic AI Frameworks</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-              <p class="skill-desc">
-                LangGraph, CrewAI, AutoGen, LlamaIndex Agents, Semantic Kernel,
-                MCP (Model Context Protocol)
-              </p>
-            </div>
-
-            <!-- 11. Vector Databases -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-server"></i>
-                <h3>Vector Databases</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-              <p class="skill-desc">
-                Pinecone, Weaviate, Qdrant, Chroma, FAISS, pgvector,
-                Elasticsearch hybrid search
-              </p>
-            </div>
-
-            <!-- 12. LLMOps & Evaluation -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-line-chart"></i>
-                <h3>LLMOps &amp; Evaluation</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-              <p class="skill-desc">
-                LangSmith, Langfuse, MLflow, Weights &amp; Biases, RAGAS,
-                DeepEval, prompt &amp; agent tracing
-              </p>
-            </div>
-
-            <!-- 13. Serving & MLOps -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-package"></i>
-                <h3>Model Serving &amp; MLOps</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-              <p class="skill-desc">
-                FastAPI, vLLM, Ollama, TGI, Docker, Kubernetes, Triton,
-                CI/CD for ML
-              </p>
-            </div>
-
-            <!-- 14. Computer Vision & Multi-modal -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bx-camera"></i>
-                <h3>Computer Vision &amp; Multi-modal</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-              <p class="skill-desc">
-                Vision Transformers, CLIP, BLIP, LLaVA, Whisper, OCR,
-                diffusion models
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section class="section experience" id="experience">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">Where I've worked</span>
-            <h2 class="section-title">Experience</h2>
-          </div>
-          <div class="experience-list">
-            <div class="exp-item">
-              <h3>Lead AI Engineer</h3>
-              <p class="exp-company">Clinical Pearl (Apr 2025 – Present)</p>
-              <ul>
-                <li>
-                  Fine‑tuned OpenAI, LLAMA and Mistral models for randomized
-                  clinical trial data, improving response quality and trust.
-                </li>
-                <li>
-                  Designed and deployed Retrieval‑Augmented Generation pipelines
-                  using LangChain + FastAPI as the backbone for medical chat
-                  systems.
-                </li>
-                <li>
-                  Built FastAPI endpoints powering real‑time question answering,
-                  vector search and document ingestion pipelines.
-                </li>
-              </ul>
-            </div>
-            <div class="exp-item">
-              <h3>Machine Learning Engineer</h3>
-              <p class="exp-company">Clinical Pearl (Apr 2024 – Aug 2025)</p>
-              <ul>
-                <li>
-                  Implemented multi‑modal RAG systems integrating radiology
-                  images, text and tabular data for comprehensive medical
-                  analysis.
-                </li>
-                <li>
-                  Integrated Elasticsearch for intelligent search across medical
-                  corpora and clinical records.
-                </li>
-                <li>
-                  Collaborated cross‑functionally on AI productization, vector
-                  store design (Pinecone) and backend optimization.
-                </li>
-              </ul>
-            </div>
-            <div class="exp-item">
-              <h3>Machine Learning Engineer</h3>
-              <p class="exp-company">Cplus Soft (Dec 2023 – Mar 2024)</p>
-              <ul>
-                <li>
-                  Designed and implemented advanced generative AI models using
-                  GPT, Hugging Face and Transformers.
-                </li>
-                <li>
-                  Integrated LangChain software into various AI projects to
-                  enhance capabilities.
-                </li>
-                <li>
-                  Conducted research on emerging generative AI trends to drive
-                  innovation and improve model performance.
-                </li>
-              </ul>
-            </div>
-            <div class="exp-item">
-              <h3>Machine Learning Trainer</h3>
-              <p class="exp-company">AI Lounge / NUST (Jul 2023 – Nov 2023)</p>
-              <ul>
-                <li>
-                  Designed and executed a comprehensive data science and AI
-                  training curriculum for students in Gilgit‑Baltistan.
-                </li>
-                <li>
-                  Conducted interactive sessions focusing on practical skills
-                  and real‑world applications.
-                </li>
-                <li>
-                  Mentored participants and helped advance the regional tech
-                  industry.
-                </li>
-              </ul>
-            </div>
-            <div class="exp-item">
-              <h3>NLP Teaching Assistant</h3>
-              <p class="exp-company">FAST‑NUCES (Jan 2023 – Jun 2023)</p>
-              <ul>
-                <li>
-                  Explained complex NLP concepts with clarity to support student
-                  learning.
-                </li>
-                <li>
-                  Developed algorithms for NLP tasks and guided students through
-                  hands‑on projects.
-                </li>
-                <li>
-                  Fostered a supportive and collaborative learning environment
-                  through mentorship.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section class="section projects" id="projects">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">Selected work</span>
-            <h2 class="section-title">Featured Projects</h2>
-          </div>
-          <div class="projects-grid">
-            <!-- 1. Medical Knowledge QA System (RAG) -->
-            <a
-              href="https://github.com/Kheem-Dh/Retrieval-and-Generation-of-Clinical-Insights-from-PDF"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-search-alt-2"></i></div>
-              <h3 class="project-title">Medical Knowledge QA System</h3>
-              <p class="project-desc">
-                FastAPI + LangChain RAG pipeline that answers medical questions
-                from uploaded research PDFs using OpenAI models and vector
-                search.
-              </p>
-            </a>
-
-            <!-- 2. Radiology Report Generation -->
-            <a
-              href="https://github.com/Kheem-Dh/RadiologyReportGen-AI"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-radiation"></i></div>
-              <h3 class="project-title">Radiology Report Generation</h3>
-              <p class="project-desc">
-                Hybrid Vision-Transformer + LLM framework that auto-generates
-                chest X-ray reports, boosting diagnostic accuracy and
-                personalization.
-              </p>
-            </a>
-
-            <!-- 3. ETL Churn Prediction Pipeline -->
-            <a
-              href="https://github.com/Kheem-Dh/Churn-Predication-Pipeline-Using-Azure-Cloud-"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-data"></i></div>
-              <h3 class="project-title">ETL Churn Prediction Pipeline</h3>
-              <p class="project-desc">
-                Azure-based ETL pipeline (ADF + SQL + Streamlit) that predicts
-                retail customer churn and triggers proactive retention insights.
-              </p>
-            </a>
-
-            <!-- 4. OCR Text Extraction Suite -->
-            <a
-              href="https://github.com/Kheem-Dh/OCR-Text-Extraction-From-Images-to-Images"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-image-alt"></i></div>
-              <h3 class="project-title">OCR Text Extraction Suite</h3>
-              <p class="project-desc">
-                End-to-end pipeline that detects text in images, performs OCR,
-                and re-renders clean text onto new images for downstream NLP
-                tasks.
-              </p>
-            </a>
-
-            <!-- 5. Urdu-to-English Transformer MT -->
-            <a
-              href="https://github.com/Kheem-Dh/Urdu-to-English-Machine-Translation-using-Seq2Seq-Transformers-Variant-Model"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-transfer-alt"></i></div>
-              <h3 class="project-title">Urdu-English Transformer MT</h3>
-              <p class="project-desc">
-                Sequence-to-sequence Transformer model fine-tuned for
-                high-quality Urdu → English machine translation on custom
-                parallel corpora.
-              </p>
-            </a>
-
-            <!-- 6. Multi-Agent Clinical Research Assistant -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-network-chart"></i></div>
-              <h3 class="project-title">
-                Multi-Agent Clinical Research Assistant
-              </h3>
-              <p class="project-desc">
-                LangGraph + CrewAI multi-agent system where Planner,
-                Retriever, Critic and Writer agents collaborate to draft
-                evidence-backed clinical summaries from PubMed and internal
-                trial data.
-              </p>
-              <p class="project-stack">
-                LangGraph · CrewAI · OpenAI · Pinecone · FastAPI
-              </p>
-            </a>
-
-            <!-- 7. Agentic RAG with Self-Correction -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-refresh"></i></div>
-              <h3 class="project-title">Agentic RAG with Self-Correction</h3>
-              <p class="project-desc">
-                Corrective-RAG pipeline that grades retrieved chunks, rewrites
-                the query, falls back to web search and reflects on its own
-                answers &mdash; boosting factuality on medical QA benchmarks.
-              </p>
-              <p class="project-stack">
-                LangGraph · LlamaIndex · Qdrant · Tavily · RAGAS
-              </p>
-            </a>
-
-            <!-- 8. MCP Tool Server for Healthcare Agents -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-plug"></i></div>
-              <h3 class="project-title">MCP Tool Server for Healthcare</h3>
-              <p class="project-desc">
-                Model Context Protocol server exposing FHIR search, ICD-10
-                lookups, drug-interaction checks and PubMed retrieval as
-                typed tools any MCP-compatible agent (Claude, Cursor, custom)
-                can call safely.
-              </p>
-              <p class="project-stack">
-                MCP · Python · FHIR · FastAPI · Pydantic
-              </p>
-            </a>
-
-            <!-- 9. Voice-Enabled Medical Assistant Agent -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-microphone"></i></div>
-              <h3 class="project-title">Voice Medical Assistant Agent</h3>
-              <p class="project-desc">
-                Real-time voice agent that transcribes patient intake with
-                Whisper, plans actions with a tool-using LLM, calls EHR
-                lookups, and streams grounded, guardrailed responses back via
-                TTS.
-              </p>
-              <p class="project-stack">
-                Whisper · OpenAI Realtime · LangGraph · ElevenLabs · WebRTC
-              </p>
-            </a>
-
-            <!-- 10. Autonomous Code-Review Agent -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-code-block"></i></div>
-              <h3 class="project-title">Autonomous Code-Review Agent</h3>
-              <p class="project-desc">
-                GitHub-integrated agent that clones a PR, plans a review
-                strategy, runs static analysis and tests as tools, and posts
-                inline comments &mdash; with a critic agent enforcing a
-                house style guide.
-              </p>
-              <p class="project-stack">
-                LangGraph · AutoGen · GitHub API · Docker · Semgrep
-              </p>
-            </a>
-
-            <!-- 11. LLM Fine-Tuning Studio (LoRA/QLoRA) -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-cog"></i></div>
-              <h3 class="project-title">LLM Fine-Tuning Studio</h3>
-              <p class="project-desc">
-                End-to-end LoRA / QLoRA fine-tuning workflow for LLaMA-3,
-                Mistral and Qwen on clinical instruction data, with
-                evaluation, quantization (GGUF / AWQ) and one-click vLLM
-                deployment.
-              </p>
-              <p class="project-stack">
-                PyTorch · PEFT · Unsloth · vLLM · Weights &amp; Biases
-              </p>
-            </a>
-
-            <!-- 12. GraphRAG Knowledge Explorer -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-git-branch"></i></div>
-              <h3 class="project-title">GraphRAG Knowledge Explorer</h3>
-              <p class="project-desc">
-                Knowledge-graph-augmented RAG over biomedical literature:
-                Neo4j-backed entity graph + community summaries fused with
-                dense retrieval for multi-hop clinical reasoning.
-              </p>
-              <p class="project-stack">
-                Neo4j · GraphRAG · LlamaIndex · OpenAI · Streamlit
-              </p>
-            </a>
-
-            <!-- 13. Agent Evaluation & Observability Suite -->
-            <a
-              href="https://github.com/Kheem-Dh"
-              class="project-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-icon"><i class="bx bx-line-chart"></i></div>
-              <h3 class="project-title">
-                Agent Evaluation &amp; Observability Suite
-              </h3>
-              <p class="project-desc">
-                Test-harness for multi-agent workflows: golden-trace replay,
-                LLM-as-judge scoring, cost / latency dashboards and
-                regression alerts wired into CI for every agent release.
-              </p>
-              <p class="project-stack">
-                LangSmith · Langfuse · RAGAS · DeepEval · GitHub Actions
-              </p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section class="section education" id="education">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">Academic background</span>
-            <h2 class="section-title">Education</h2>
-          </div>
-          <div class="education-list">
-            <div class="edu-item">
-              <h3>MS in Data Science</h3>
-              <p class="edu-school">FAST‑NUCES, Islamabad (2022 – 2024)</p>
-              <p class="edu-desc">
-                Research Thesis: Hybrid radiology report generation using vision
-                transformers &amp; language models; enhanced automated lung
-                cancer diagnosis by leveraging the MIMIC CXR dataset and
-                radiology literature.
-              </p>
-            </div>
-            <div class="edu-item">
-              <h3>B.E. in Computer Systems</h3>
-              <p class="edu-school">Mehran UET, Jamshoro (2017 – 2021)</p>
-              <p class="edu-desc">
-                Graduated with a 3.7/4.0 CGPA while building a strong foundation
-                in computer systems engineering and software development.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Licenses & Certifications -->
-      <section class="section certifications" id="certifications">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">Continuous learning</span>
-            <h2 class="section-title">Licenses &amp; Certifications</h2>
-          </div>
-
-          <div class="skills-grid">
-            <!-- re-use same 3-column grid -->
-
-            <!-- 1. Generative AI w/ LLMs -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxs-badge-check"></i>
-                <h3>Generative AI w/ LLMs</h3>
-              </div>
-              <p class="skill-desc">
-                <strong>DeepLearning.AI</strong> &nbsp;·&nbsp; Issued Mar
-                2024<br />
-                Credential ID 7WR2YLJ6CFUH<br />
-                Skills: Generative AI, Python, LLMs
-              </p>
-              <a
-                href="assets/pdf/Coursera 7WR2YLJ6CFUH.pdf"
-                class="button secondary-button"
-                download
-                >Show credential</a
-              >
-            </div>
-
-            <!-- 2. GPT (University of Glasgow) -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxs-badge-check"></i>
-                <h3>Generative Pre-trained Transformers (GPT)</h3>
-              </div>
-              <p class="skill-desc">
-                <strong>University of Glasgow</strong> &nbsp;·&nbsp; Issued Jan
-                2024<br />
-                Credential ID XEJ45XZ9LXLB<br />
-                Skills: Generative AI, GPT
-              </p>
-              <a
-                href="assets/pdf/Coursera XEJ45XZ9LXLB.pdf"
-                class="button secondary-button"
-                download
-                >Show credential</a
-              >
-            </div>
-
-            <!-- 3. AI for Everyone -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxs-badge-check"></i>
-                <h3>AI for Everyone</h3>
-              </div>
-              <p class="skill-desc">
-                <strong>DeepLearning.AI</strong> &nbsp;·&nbsp; Issued Dec
-                2023<br />
-                Credential ID VMRBKCN96YNA<br />
-                Skills: AI, Python
-              </p>
-              <a
-                href="assets/pdf/Coursera VMRBKCN96YNA.pdf"
-                class="button secondary-button"
-                download
-                >Show credential</a
-              >
-            </div>
-
-            <!-- 4. Machine Learning Specialization -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxs-badge-check"></i>
-                <h3>Machine Learning Specialization</h3>
-              </div>
-              <p class="skill-desc">
-                <strong>Stanford University</strong> &nbsp;·&nbsp; Issued Dec
-                2023<br />
-                Credential ID DGSLZT2T27XQ<br />
-                Skills: Python, Machine Learning
-              </p>
-              <a
-                href="assets/pdf/Coursera DGSLZT2T27XQ.pdf"
-                class="button secondary-button"
-                download
-                >Show credential</a
-              >
-            </div>
-
-            <!-- 5. Python for DS, AI & Dev -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxs-badge-check"></i>
-                <h3>Python for DS, AI &amp; Development</h3>
-              </div>
-              <p class="skill-desc">
-                <strong>IBM</strong> &nbsp;·&nbsp; Issued Mar 2023<br />
-                Credential ID FV2DGK5529ZM<br />
-                Skills: Python
-              </p>
-              <a
-                href="assets/pdf/Coursera FV2DGK5529ZM.pdf"
-                class="button secondary-button"
-                download
-                >Show credential</a
-              >
-            </div>
-
-            <!-- 6. Oracle SQL DB Specialization -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <i class="bx bxs-badge-check"></i>
-                <h3>Oracle SQL Databases Specialization</h3>
-              </div>
-              <p class="skill-desc">
-                <strong>LearnQuest</strong> &nbsp;·&nbsp; Issued Feb 2023<br />
-                Credential ID B94CL4MHKWM<br />
-                Skills: SQL, Relational DBs
-              </p>
-              <a
-                href="assets/pdf/Coursera B94CL4MHKWMM.pdf"
-                class="button secondary-button"
-                download
-                >Show credential</a
-              >
-            </div>
-          </div>
-          <!-- /.skills-grid -->
-        </div>
-      </section>
-
-      <!-- Publications Section -->
-      <section class="section publications" id="publications">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">Research</span>
-            <h2 class="section-title">Publications</h2>
-          </div>
-          <div class="publications-list">
-            <!-- 1. SDCG for Image Captioning -->
-            <a
-              href="https://www.techscience.com/cmc/v84n2/62924"
-              class="pub-item"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>
-                Optimizing Sentiment Integration in Image Captioning Using
-                Transformer-Based Fusion Strategies
-              </h3>
-              <p class="pub-meta">
-                CMC – Computers, Materials & Continua, Jul 3 2025
-              </p>
-              <p class="pub-desc">
-                Presents the Sentiment-Driven Caption Generator (SDCG),
-                combining transformer-based visual and textual processing to
-                reach 94.52 % sentiment accuracy and produce more human-like
-                captions.
-              </p>
-            </a>
-
-            <!-- 2. EEBERT -->
-            <a
-              href="https://ieeexplore.ieee.org/document/10669019"
-              class="pub-item"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>
-                EEBERT: An Emoji-Enhanced BERT Fine-Tuning on Amazon Product
-                Reviews for Text Sentiment Classification
-              </h3>
-              <p class="pub-meta">IEEE Access, Sep 6 2024</p>
-              <p class="pub-desc">
-                Introduces the Sentiment Adjustment Factor (SAF) for emoji
-                tokenization and fine-tunes BERT on Amazon reviews, achieving
-                99.21 % average accuracy via 5-fold cross-validation.
-              </p>
-            </a>
-
-            <!-- 3. Urdu-Tweet Sentiment Fusion -->
-            <a
-              href="https://ieeexplore.ieee.org/document/10643088"
-              class="pub-item"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>
-                Enhancing Emoji-Based Sentiment Classification in Urdu Tweets:
-                Fusion Strategies With Multilingual BERT and Emoji Embeddings
-              </h3>
-              <p class="pub-meta">IEEE Access, Aug 2024</p>
-              <p class="pub-desc">
-                Demonstrates that fusing multilingual BERT with emoji embeddings
-                significantly improves sentiment analysis for Urdu tweets,
-                offering a robust multilingual approach.
-              </p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="section contact" id="contact">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">Contact</span>
-            <h2 class="section-title">Get in Touch</h2>
-          </div>
-          <p class="contact-text">
-            Whether you have an interesting project, a question, or just want to
-            say hello, my inbox is always open. Feel free to drop a message!
-          </p>
-          <form class="contact-form" id="contact-form">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="Your Name" required />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                id="message"
-                rows="6"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="button">Send Message</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-container">
-        <p class="footer-copy">
-          &copy; <span id="year">2025</span> Kheem Parkash Dharmani. Built with
-          HTML, CSS &amp; JavaScript.
-        </p>
-        <div class="footer-social">
-          <a
-            href="https://pk.linkedin.com/in/kheemparkashdharmani"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a
-            href="https://github.com/Kheem-Dh"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="mailto:dharmanikheem@gmail.com"
-            ><i class="bx bxs-envelope"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="assets/js/script.js"></script>
-  </body>
+<script src="assets/js/script.js"></script>
+</body>
 </html>
